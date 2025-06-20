@@ -8,7 +8,7 @@ if (isset($_SESSION['auth']) == 1) {
 <html lang="en">
     
     <link rel="icon" href="/favicon.png">
-    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <title>COSC 4806</title>
 
     <meta charset="UTF-8">
