@@ -16,6 +16,17 @@ class Create extends Controller {
         header('Location: /create');
         exit;
     }
+    $user = $this->model('User');
+    try {
+        $user->register($username, $password);
+        $_SESSION['success'] = "Account created successfully. You can now log in.";
+        header('Location: /login');
+        exit;
+    } catch (Exception $e) {
+        $_SESSION['error'] = "Something went wrong. Try again.";
+        header('Location: /create');
+        exit;
 }
   }
+}
 }
