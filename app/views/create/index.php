@@ -23,16 +23,16 @@
     <fieldset>
       <div class="form-group">
         <label for="username">Username</label>
-        <input required type="text" class="form-control" name="username">
+        <input required type="text" class="form-control" name="username"><br/><br/>
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input required type="password" class="form-control" name="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" title="Must contain an uppercase, lower case and atleast 10 or more characters">
+        <input required type="password" class="form-control" name="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" title="Must contain an uppercase, lower case and atleast 10 or more characters"><br/><br/>
 
       </div>
         <div class="form-group">
             <label for="password">Confirm Password</label>
-            <input required type="password" class="form-control" name="confirm_password">
+            <input required type="password" class="form-control" name="confirm_password"><br/><br/>
           </div>
             <br>
 
