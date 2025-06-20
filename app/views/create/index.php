@@ -18,7 +18,8 @@
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input required type="password" class="form-control" name="password">
+        <input required type="password" class="form-control" name="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" title="Must contain an uppercase, lower case and atleast 10 or more characters">
+
       </div>
         <div class="form-group">
             <label for="password">Confirm Password</label>
