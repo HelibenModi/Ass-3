@@ -37,6 +37,11 @@ class User {
             unset($_SESSION['lastFailedTime']);
         }
     }
+     // Proceed to verify credentials
+      $statement = $db->prepare("SELECT * FROM users WHERE username = :name;");
+      $statement->bindValue(':name', $username);
+      $statement->execute();
+      $rows = $statement->fetch(PDO::FETCH_ASSOC);
    }
   public function register($username, $password) {
   $db = db_connect();
