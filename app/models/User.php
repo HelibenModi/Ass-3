@@ -62,6 +62,13 @@ class User {
           }
       
    }
+  private function logAttempt($username, $status) {
+      $db = db_connect();
+      $stmt = $db->prepare("INSERT INTO login_logs (username, was_success) VALUES (:username, :was_success)");
+      $stmt->bindValue(':username', $username);
+      $stmt->bindValue(':was_success', $status === 'success' ? 1 : 0, PDO::PARAM_INT);
+      $stmt->execute();
+  }
   public function register($username, $password) {
   $db = db_connect();
 
